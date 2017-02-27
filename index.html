@@ -3,61 +3,92 @@
  <head>
    <title>Home</title>
    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+   <style type="text/css">
+.bgimg {
+    background-image: url('img/game.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+	background-size: 100%;
+  margin-bottom: 20px;
+}
+
+</style>
  </head>
- <body>
-   <div class='container'> 
-    <div class = 'row text-center'>  
-	<div class='col-md-12'>
-   <h1>Game Store</h1>
-   <p>add the menue here</p>
-	</div>
+ <body >
+ <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container ">
+     <div class='navbar-header'>
+      <a class="navbar-brand" href="#">Game Store</a>
+   	<button type="button" class="navbar-toggle"
+    data-toggle = 'collapse'
+    data-target='.navbar-collapse'>
+    <span class="sr-only">toggle navigation</span>
+    <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+    </button>
     </div>
-     <div class = 'row text-center'>
-    <div class='col-md-12'>
-   <h2>Game1</h2>
+    <ul class="nav navbar-nav navbar-right collapse navbar-collapse" >
+
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li class="active"><a href="#" data-target='#' data-toggle='dropdown'>About<span class='caret'></span></a>
+      <ul class='dropdown-menu'>
+      <li><a href="#">Contact Us</a></li>
+      <li class='divider'></li>
+      <li><a href="#">Facebook</a></li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+  </nav>
+   <div class='container'>
+     <div class = 'row text-center' >
+    <div class='col-md-12 col-sm-12 col-xs-12 bgimg' >
+   <h2 >Game1</h2>
    <p>Decription coming up</p>
    </div>
    </div>
     <div class = 'row text-center'>
-   <div class='col-md-12'>
+   <div class='col-md-12 col-sm-12 col-xs-12 bgimg' >
     <h2>Game2</h2>
     <p>Decription coming up</p>
     </div>
-    </div>    
+    </div>
      <div class = 'row text-center'>
-    <div class='col-md-12'>
+    <div class='col-md-12 col-sm-12 col-xs-12 bgimg' >
     <h2>Game3</h2>
     <p>Decription coming up</p>
     </div>
-    </div>   
+    </div>
      <div class = 'row text-center'>
-    <div class='col-md-12'>
+    <div class='col-md-12 col-sm-12 col-xs-12 bgimg'>
     <h2>Game4</h2>
     <p>Decription coming up</p>
     </div>
    </div>
     </div>
-    
-   <div class='container modal-footer'>
+
+   <div class='container well well-lg'>
    <div class = 'row'>
-   <div class='col-md-4' >
-     <h4>some links here in 3 column as footer</h4>
+   <div class='col-md-4 col-sm-4 col-xs-4' >
+     <h4>some links here as footer</h4>
      <ul  class='list-unstyled'>
      <li>link1</li>
      <li>link1</li>
      <li>link1</li>
      </ul>
    </div>
-   <div class='col-md-4' >
-     <h4>some links here in 3 column as footer</h4>
+   <div class='col-md-4 col-sm-4 col-xs-4' >
+     <h4>some links here as footer</h4>
      <ul class='list-unstyled'>
      <li>link1</li>
      <li>link1</li>
      <li>link1</li>
      </ul>
    </div>
-   <div class='col-md-4' >
-     <h4>some links here in 3 column as footer</h4>
+   <div class='col-md-4 col-sm-4 col-xs-4' >
+     <h4>some links here as footer</h4>
      <ul class='list-unstyled'>
      <li>link1</li>
      <li>link1</li>
@@ -66,8 +97,8 @@
    </div>
    </div>
  </div>
-    <script src= 'http //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></<script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src='bootstrap-3.3.7-dist/js/bootstrap.js'></script>
-    </script>
+
  </body>
 </html>
