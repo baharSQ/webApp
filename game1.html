@@ -2,28 +2,28 @@
 <html lang='en'>
  <head>
  	<title>Game1</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     <!-- Polyfill(s) for older browsers -->
     <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
 
-    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
-    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/zone.js@0.7.4?main=browser"></script>
     <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
-
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
-
     <script>
-      System.import('app/main.ts').catch(function(err){ console.error(err);  });
+      System.import('main.js').catch(function(err){ console.error(err); });
     </script>
  </head>
  <body>
  	<nav class="navbar navbar-default navbar-fixed-top">
      <div class="container ">
      <div class='navbar-header'>
-      <a class="navbar-brand" href="#">Game Store</a>
-   	<button type="button" class="navbar-toggle" 
-    data-toggle = 'collapse' 
+      <a class="navbar-brand" href="index.html">Game Store</a>
+   	<button type="button" class="navbar-toggle"
+    data-toggle = 'collapse'
     data-target='.navbar-collapse'>
     <span class="sr-only">toggle navigation</span>
     <span class="icon-bar"></span>
@@ -32,7 +32,7 @@
     </button>
     </div>
     <ul class="nav navbar-nav navbar-right collapse navbar-collapse" >
-      
+
       <li><a href="#">Page 2</a></li>
       <li><a href="#">Page 3</a></li>
       <li class="active"><a href="#" data-target='#' data-toggle='dropdown'>About<span class='caret'></span></a>
@@ -46,9 +46,9 @@
   </div>
   </nav>
   <div class='container'>
-     <div class = 'row text-center' >
-    <div class='col-md-12 col-sm-12 col-xs-12 bgimg' >
-   <my-app>Loading...</my-app>
+     <div class = 'row' >
+    <div class='col-md-12 col-sm-12 col-xs-12 bgimg ' >
+       <my-app>Loading...</my-app>
    </div>
    </div>
     </div>

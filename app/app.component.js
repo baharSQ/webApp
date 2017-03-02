@@ -19,21 +19,23 @@ System.register(["@angular/core"], function (exports_1, context_1) {
             };
             exports_1("Hero", Hero);
             HEROES = [
-                { id: 11, name: 'Mr. Nice' },
-                { id: 12, name: 'Narco' },
-                { id: 13, name: 'Bombasto' },
-                { id: 14, name: 'Celeritas' },
-                { id: 15, name: 'Magneta' },
-                { id: 16, name: 'RubberMan' },
-                { id: 17, name: 'Dynama' },
-                { id: 18, name: 'Dr IQ' },
-                { id: 19, name: 'Magma' },
-                { id: 20, name: 'Tornado' }
+                { inStock: 0, name: 'Game1', date: '3.3.2017', image: '../img/game.jpg', quantity: 0 },
+                { inStock: 6, name: 'Game2', date: '1.5.2016', image: '../img/game.jpg', quantity: 0 },
+                { inStock: 13, name: 'Game3', date: '1.3.2016', image: '../img/game.jpg', quantity: 0 },
+                { inStock: 14, name: 'Game4', date: '3.5.2017', image: '../img/game.jpg', quantity: 0 }
             ];
             AppComponent = class AppComponent {
                 constructor() {
-                    this.title = 'Tour of Heroes';
+                    this.title = 'List of Games';
                     this.heroes = HEROES;
+                }
+                upQuantity(hero) {
+                    if (hero.quantity < hero.inStock)
+                        hero.quantity++;
+                }
+                downQuantity(hero) {
+                    if (hero.quantity != 0)
+                        hero.quantity--;
                 }
                 onSelect(hero) {
                     this.selectedHero = hero;
@@ -43,73 +45,38 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 core_1.Component({
                     selector: 'my-app',
                     template: `
+    <div class='container cont-pad' >
+    <div calss='col-md-12 col-sm-12 col-xs-12 ' style="
+    margin-bottom: 30px;
+">
     <h1>{{title}}</h1>
-    <h2>My Heroes</h2>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes"
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </div>
+    </div>
+    <ul class='list-unstyled' >
+      <li *ngFor="let hero of heroes">
+      <div class='container cont-pad' >
+      <div class='row'>
+      <div class='col-md-4 col-sm-4 col-xs-4  row-img cont-pad'  >
+      <img [src]="hero.image" class="img-rounded  float-left" height="170px" width="370px">
+      </div>
+      <div class='col-md-6 col-sm-6 col-xs-6 col-md-offset-2 row-img' >
+      <h2>{{hero.name}}</h2>
+        <p *ngIf="hero.inStock > 0">{{hero.inStock}} in stock</p>
+        <p *ngIf="hero.inStock === 0"> Out of stock</p>
+        <p >Release Date: {{hero.date| date : 'longDate'}}</p>
+        <button (click)="downQuantity(hero)">-</button>
+        <input type="text" style="width: 24px; text-align:center" [value]="hero.quantity"
+        (input)="hero.quantity=$event.target.value"
+         >
+
+        <button (click)="upQuantity(hero)">+</button>
+      </div>
+      </div>
+      </div>
       </li>
     </ul>
-    <div *ngIf="selectedHero">
-      <h2>{{selectedHero.name}} details!</h2>
-      <div><label>id: </label>{{selectedHero.id}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-      </div>
-    </div>
   `,
-                    styles: [`
-    .selected {
-      background-color: #CFD8DC !important;
-      color: white;
-    }
-    .heroes {
-      margin: 0 0 2em 0;
-      list-style-type: none;
-      padding: 0;
-      width: 15em;
-    }
-    .heroes li {
-      cursor: pointer;
-      position: relative;
-      left: 0;
-      background-color: #EEE;
-      margin: .5em;
-      padding: .3em 0;
-      height: 1.6em;
-      border-radius: 4px;
-    }
-    .heroes li.selected:hover {
-      background-color: #BBD8DC !important;
-      color: white;
-    }
-    .heroes li:hover {
-      color: #607D8B;
-      background-color: #DDD;
-      left: .1em;
-    }
-    .heroes .text {
-      position: relative;
-      top: -3px;
-    }
-    .heroes .badge {
-      display: inline-block;
-      font-size: small;
-      color: white;
-      padding: 0.8em 0.7em 0 0.7em;
-      background-color: #607D8B;
-      line-height: 1em;
-      position: relative;
-      left: -1px;
-      top: -4px;
-      height: 1.8em;
-      margin-right: .8em;
-      border-radius: 4px 0 0 4px;
-    }
-  `]
+                    styleUrls: ['../bootstrap-3.3.7-dist/css/bootstrap.css']
                 })
             ], AppComponent);
             exports_1("AppComponent", AppComponent);
