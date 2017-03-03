@@ -6,10 +6,11 @@
 //}
 
 $(document).ready(function(){
-  $('#a').mouseenter(function(){$(this).animate({backgroundSize: '120%'},1000)});
-  $('#a').mouseout(function(){$(this).stop().css({backgroundSize: '100%'})});
+  $('.bgimg').mouseover(function(){$(this).animate({backgroundSize: '120%'},900)});
+  $('.bgimg').mouseout(function(){$(this).stop().css({backgroundSize: '100%'})});
 
 })
+
 
 //function zoomOut(x) {
 
