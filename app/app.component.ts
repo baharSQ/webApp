@@ -31,9 +31,9 @@ const HEROES: Hero[] = [
       <div class='container cont-pad' >
       <div class='row'>
       <div class='col-md-4 col-sm-4 col-xs-4  row-img cont-pad'  >
-      <img [src]="hero.image" class="img-rounded  float-left" height="170px" width="370px">
+      <img [src]="hero.image" class="img-rounded  float-left col-md-12 col-sm-12 col-xs-12" height="170px" width="370px">
       </div>
-      <div class='col-md-6 col-sm-6 col-xs-6 col-md-offset-2 row-img' >
+      <div class='col-md-6 col-sm-6 col-xs-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-2 row-img' >
       <h2>{{hero.name}}</h2>
         <p *ngIf="hero.inStock > 0">{{hero.inStock}} in stock</p>
         <p *ngIf="hero.inStock === 0"> Out of stock</p>
