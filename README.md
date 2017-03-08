@@ -4,7 +4,7 @@ A sample HTML5-based tool using different front end technologies.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will give a copy of the project up and running on local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -30,14 +30,12 @@ npm start
 ```
 
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Deployment
 
 Digital ocean droplet with the ubuntu 14.04 is used as a server. The app is published to a web server directly out of the development environment. 
 
 ## Authors
 
-* **Bahareh Sadeghian Boroujeni** - *Initial work* - [PurpleBooth](https://github.com/baharsq)
+* **Bahareh Sadeghian Boroujeni** - *Initial work* - (https://github.com/baharsq)
 
 
