@@ -27,7 +27,10 @@ npm install -g lite-server
 npm install -g typescript
 npm start
 ```
+## ToDo
 
+Browsers compability including Firefox.
+Optimization for peoduction mode using webpack.
 
 ## Deployment
 
