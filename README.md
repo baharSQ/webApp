@@ -8,8 +8,7 @@ These instructions will give a copy of the project up and running on local machi
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-Node.js and npm needed to be installed. to install Node.js use one of the installers from the Node.js download page. If you're using Linux, you can use the installer, or you can check NodeSource's binary distributions.
+Bootstrap, Node.js and npm needed to be installed. to install Node.js use one of the installers from the Node.js download page. If you're using Linux, you can use the installer, or you can check NodeSource's binary distributions.
 After installing Node.js using:
 ```
 npm install
